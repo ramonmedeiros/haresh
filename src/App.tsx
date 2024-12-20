@@ -5,8 +5,10 @@ const App = () => {
 
 
   const getGuestName = () => {
+    const path = window.location.hash
+
     for (let i = 0; i < Guests.length; i++) {
-      if (window.location.pathname.includes(Guests[i].url)) {
+      if (path.includes(Guests[i].url)) {
         return `${Guests[i].person1} and ${Guests[i].person2}`
       }
     }
